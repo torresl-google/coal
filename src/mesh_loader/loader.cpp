@@ -46,6 +46,7 @@
 #include "coal/BV/BV.h"
 
 namespace coal {
+#if 0
 bool CachedMeshLoader::Key::operator<(const CachedMeshLoader::Key& b) const {
   const CachedMeshLoader::Key& a = *this;
   for (int i = 0; i < 3; ++i) {
@@ -56,6 +57,7 @@ bool CachedMeshLoader::Key::operator<(const CachedMeshLoader::Key& b) const {
   }
   return std::less<std::string>()(a.filename, b.filename);
 }
+#endif
 
 template <typename BV>
 BVHModelPtr_t _load(const std::string& filename, const Vec3s& scale) {
@@ -99,6 +101,7 @@ CollisionGeometryPtr_t MeshLoader::loadOctree(const std::string& filename) {
 #endif
 }
 
+#if 0
 BVHModelPtr_t CachedMeshLoader::load(const std::string& filename,
                                      const Vec3s& scale) {
   Key key(filename, scale);
@@ -123,4 +126,5 @@ BVHModelPtr_t CachedMeshLoader::load(const std::string& filename,
   cache_[key] = val;
   return geom;
 }
+#endif
 }  // namespace coal

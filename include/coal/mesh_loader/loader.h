@@ -66,6 +66,7 @@ class COAL_DLLAPI MeshLoader {
   const NODE_TYPE bvType_;
 };
 
+#if 0
 /// Class for building polyhedron from files with cache mechanism.
 /// This class builds a new object for each different file.
 /// If method CachedMeshLoader::load is called twice with the same arguments,
@@ -97,6 +98,7 @@ class COAL_DLLAPI CachedMeshLoader : public MeshLoader {
  private:
   Cache_t cache_;
 };
+#endif
 }  // namespace coal
 
 #endif  // COAL_MESH_LOADER_LOADER_H
