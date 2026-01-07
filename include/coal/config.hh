@@ -1,0 +1,3 @@
+#define COAL_DLLAPI
+#define COAL_LOCAL
+#define COAL_EXPLICIT_INSTANTIATION_DECLARATION extern template

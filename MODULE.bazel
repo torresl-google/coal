@@ -1,0 +1,9 @@
+module(name = "coal", version = "3.0.2")
+
+bazel_dep(name = "boost.filesystem", version = "1.89.0.bcr.1")
+bazel_dep(name = "boost.math", version = "1.89.0.bcr.1")
+bazel_dep(name = "rules_cc", version = "0.2.16")
+bazel_dep(name = "abseil-cpp", version = "20250814.1")
+bazel_dep(name = "assimp", version = "6.0.2")
+bazel_dep(name = "eigen", version = "5.0.1")
+bazel_dep(name = "octomap", version = "1.10.0")

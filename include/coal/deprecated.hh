@@ -1,0 +1,2 @@
+#define COAL_DEPRECATED
+#define COAL_DEPRECATED_MESSAGE(message)
