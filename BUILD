@@ -50,7 +50,7 @@ cc_library(
         "@assimp",
         "@boost.filesystem",
         "@boost.math",
-        "@eigen",
+        "@com_gitlab_libeigen_eigen//:eigen",
         "@octomap",
     ],
 )
