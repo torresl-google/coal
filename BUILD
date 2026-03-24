@@ -35,7 +35,7 @@ cc_library(
     srcs = coal_srcs,
     hdrs = coal_hdrs,
     copts = [
-        "-fno-exceptions",
+        "-fexceptions",
     ],
     defines = [
         "COAL_HAS_OCTOMAP",

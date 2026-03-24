@@ -63,17 +63,15 @@
 #define COAL_ONLY_USED_FOR_DEBUG(var)
 #endif
 
-// #define COAL_THROW_PRETTY(message, exception)              \
-//   {                                                        \
-//     std::stringstream ss;                                  \
-//     ss << "From file: " << __FILE__ << "\n";               \
-//     ss << "in function: " << COAL_PRETTY_FUNCTION << "\n"; \
-//     ss << "at line: " << __LINE__ << "\n";                 \
-//     ss << "message: " << message << "\n";                  \
-//     throw exception(ss.str());                             \
-//   }
-#define COAL_THROW_PRETTY(message, exception) \
-  CHECK(false) << message << std::endl;
+#define COAL_THROW_PRETTY(message, exception)              \
+   {                                                        \
+     std::stringstream ss;                                  \
+     ss << "From file: " << __FILE__ << "\n";               \
+     ss << "in function: " << COAL_PRETTY_FUNCTION << "\n"; \
+     ss << "at line: " << __LINE__ << "\n";                 \
+     ss << "message: " << message << "\n";                  \
+     throw exception(ss.str());                             \
+   }
 
 #ifdef COAL_TURN_ASSERT_INTO_EXCEPTION
 #define COAL_ASSERT(check, message, exception) \
